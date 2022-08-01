@@ -8,10 +8,10 @@ function runGame() {
         computerIcon.src = `../images/${randomMaterialNumber}.png`;
     }, 1000);
     if (playerChoise) {
-        if (computerChoise === "tas") {
+        if (randomMaterialNumber === "tas") {
             sonuc.innerHTML = "berabere"
             return "berabere"
-        } else if (computerChoise === "kagit") {
+        } else if (randomMaterialNumber === "kagit") {
             sonuc.innerHTML = `player: 0 computer: 1`
             return "kaybettiniz"
         } else {
