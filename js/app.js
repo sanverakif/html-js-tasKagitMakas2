@@ -1,21 +1,21 @@
 function runGame() {
     const options = ["tas", "kagit", "makas"]
     const playerChoise = "tas"
-    const computerChoise = options[Math.floor(Math.random() * 3)];
+    const randomMaterialNumber = options[Math.floor(Math.random() * 3)];
     const computerIcon = document.querySelector(".computer-image img");
-    const scoreAnons = document.querySelector(".result")
+    const sonuc = document.querySelector(".result")
     setTimeout(() => {
-        computerIcon.src = `../images/${computerChoise}.png`;
+        computerIcon.src = `../images/${randomMaterialNumber}.png`;
     }, 1000);
     if (playerChoise) {
         if (computerChoise === "tas") {
-            scoreAnons.innerHTML = "berabere"
+            sonuc.innerHTML = "berabere"
             return "berabere"
         } else if (computerChoise === "kagit") {
-            scoreAnons.innerHTML = `player: 0 computer: 1`
+            sonuc.innerHTML = `player: 0 computer: 1`
             return "kaybettiniz"
         } else {
-            scoreAnons.innerHTML = `player: 1 computer: 0`
+            sonuc.innerHTML = `player: 1 computer: 0`
             return "kazandınız"
         }
     }
